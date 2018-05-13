@@ -1,6 +1,6 @@
 # Ubiquiti Edge Router Lite 3 OpenBSD Upgrade on OSX
 
-Install OpenBSD 5.9 on your Ubiquiti Edge Router Lite 3 (ERL3) from MacOS (OSX)
+Install OpenBSD 6.3 on your Ubiquiti Edge Router Lite 3 (ERL3) from MacOS (OSX)
 
 Note that this assuredly will void warranties, guarantees and might be a tax on
 your sanity: PROCEED AT YOUR OWN PERIL.
@@ -16,7 +16,7 @@ you might just want to play around with it before putting OpenBSD on it.
 There is in fact a guide for this already, but as it is not specific to the
 ERL3 (as well taking some TFTP detours you may prefer), I decided to make a
 more lengthy, focused guide. The official Octeon OpenBSD Instructions are here:
-<http://ftp.openbsd.org/pub/OpenBSD/5.9/octeon/INSTALL.octeon>
+<http://ftp.openbsd.org/pub/OpenBSD/6.3/octeon/INSTALL.octeon>
 
 ## Tools Required
 
@@ -58,10 +58,10 @@ to you.
 
 ## Download OpenBSD from a Mirror
 
-You'll want a copy of the miniroot for OpenBSD 5.9 prior to moving forward.
-I got mine from here: <http://ftp.openbsd.org/pub/OpenBSD/5.9/octeon/>
+You'll want a copy of the miniroot for OpenBSD 6.3 prior to moving forward.
+I got mine from here: <http://ftp.openbsd.org/pub/OpenBSD/6.3/octeon/>
 
-* Via commandline: `curl -O http://ftp.openbsd.org/pub/OpenBSD/5.9/octeon/miniroot59.fs`
+* Via commandline: `curl -O https://ftp.spline.de/pub/OpenBSD/6.3/octeon/miniroot63.fs`
 
 You'll get output similar to the following, letting you know it's done (100%):
 
@@ -77,7 +77,7 @@ Remember that disk # we retrieved oh so long ago? Yep, we'll need it again:
 
 * Unmount the disk: `diskutil unmountDisk /dev/disk#`
 * Use the following command to overwrite the disk with our miniroot:
-* `sudo dd if=miniroot59.fs of=/dev/disk#`
+* `sudo dd if=miniroot63.fs of=/dev/disk#`
 
 Chances are good that you won't need to enter your password again, but in
 case you've taken a bio-break, be prepared to enter it once more
@@ -169,7 +169,7 @@ Are you ready? It's go time!
 Tons of output will result, the last of which is the following prompt:
 
 ```
-Welcome to the OpenBSD/octeon 5.9 installation program.
+Welcome to the OpenBSD/octeon 6.3 installation program.
 (I)nstall, (U)pgrade, (A)utoinstall or (S)hell?
 ```
 
@@ -180,7 +180,7 @@ that you can back up the install at any time using our process above.
 
 If you're OK using eth0 as your primary interface, you can follow along with
 my config, but otherwise I'd highly recommend the official install
-instructions: <http://ftp.openbsd.org/pub/OpenBSD/5.9/octeon/INSTALL.octeon>
+instructions: <http://ftp.openbsd.org/pub/OpenBSD/6.3/octeon/INSTALL.octeon>
 
 ## OpenBSD Install
 
