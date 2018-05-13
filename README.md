@@ -145,7 +145,7 @@ If successful, you should see the following prompt:
 Octeon ubnt_e100#
 ```
 
-This is fantastic news - we're ready load our OpenBSD 5.9 mini root image!
+This is fantastic news - we're ready load our OpenBSD mini root image!
 
 ## Boot The Image on Your Edge Router Lite
 
