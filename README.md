@@ -389,6 +389,18 @@ OpenBSD/octeon (octeon1) (console)
 login:
 ```
 
+## Use SMP kernel
+
+As per https://an.undulating.space/post/171020-erl-openbsd-smp/
+
+```
+mount /dev/sd0i /mnt
+cp /mnt/bsd /mnt/bsd.o
+cp /tmp/bsd.mp /mnt/bsd
+```
+
+Boots, however comes up with single CPU only.
+
 ## Update OpenBSD
 
 Now that everything's all installed and working, you'll want to run an update:
