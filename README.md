@@ -221,7 +221,7 @@ First we'll backup the old bootloader, then set our own as the default:
 
 * `setenv old_bootcmd "${bootcmd}"`
 * `setenv bootcmd 'fatload usb 0 $loadaddr bsd;bootoctlinux rootdev=/dev/sd0'`
-* `setenv bootdelay 5`
+* `setenv bootdelay 3`
 * `saveenv`
 
 ## Restart One Last Time
