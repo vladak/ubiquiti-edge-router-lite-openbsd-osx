@@ -399,7 +399,7 @@ cp /mnt/bsd /mnt/bsd.o
 cp /tmp/bsd.mp /mnt/bsd
 ```
 
-Boots, however comes up with single CPU only.
+Boots and comes up with 2 CPUs.
 
 ## Update OpenBSD
 
