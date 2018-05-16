@@ -220,7 +220,7 @@ it from scratch.
 First we'll backup the old bootloader, then set our own as the default:
 
 * `setenv old_bootcmd "${bootcmd}"`
-* `setenv bootcmd 'fatload usb 0 $loadaddr bsd;bootoctlinux rootdev=/dev/sd0'`
+* `setenv bootcmd 'fatload usb 0 $loadaddr bsd;bootoctlinux rootdev=/dev/sd0 coremask=0x3'`
 * `setenv bootdelay 3`
 * `saveenv`
 
